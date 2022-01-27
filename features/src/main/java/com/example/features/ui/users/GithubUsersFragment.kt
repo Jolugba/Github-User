@@ -45,11 +45,6 @@ class GithubUsersFragment : Fragment(R.layout.fragment_github_users){
             findNavController().navigate(NavigationDestinations.TO_USER_FRAGMENT)
         }
 
-
-
-//        binding.boo.setOnClickListener {
-//            findNavController().navigate(NavigationDestinations.TO_USER_FRAGMENT)
-//        }
     }
 
     private fun setUpRecyclers() {

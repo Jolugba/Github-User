@@ -2,6 +2,7 @@
 buildscript {
     repositories {
         google()
+        jcenter()
     }
     dependencies {
         classpath(Libs.gradleTools)
@@ -19,6 +20,7 @@ allprojects {
         maven { url = uri("https://maven.fabric.io/public") }
         maven { url = uri("https://jitpack.io") }
         google()
+        jcenter()
     }
 }
 
