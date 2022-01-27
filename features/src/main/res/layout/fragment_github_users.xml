@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.users.GithubUsersFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:overScrollMode="never"
         android:layout_width="match_parent"
-        android:id="@+id/userRecyclerView"
-        tools:listitem="@layout/users_item"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:id="@+id/userRecyclerView"
+            tools:listitem="@layout/users_item"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

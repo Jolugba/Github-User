@@ -32,7 +32,7 @@ class GithubUsersFragment : Fragment(R.layout.fragment_github_users){
 
         ob(viewModel.userState) {
             when (it) {
-                is UsersViewModel.State.Loading -> Timber.e("Loading")
+                is UsersViewModel.State.Loading -> binding.swipeRefresh.isRefreshing=it.isLoading
                 is UsersViewModel.State.ErrorMessage -> showShortSnackbar(it.msg.toString())
                 is UsersViewModel.State.Data -> {
                     usersAdapter.setItems(it.userData)

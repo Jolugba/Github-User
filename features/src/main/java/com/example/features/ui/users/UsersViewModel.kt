@@ -23,8 +23,10 @@ class UsersViewModel @Inject constructor(
     }
 
     private fun getUsers() {
+        userState.value=State.Loading(true)
         userUseCase.execute()
             .subscribe { response, error ->
+                userState.value=State.Loading(false)
                 if (error != null) {
                     userState.postValue(State.ErrorMessage(R.string.network_error))
                 } else {

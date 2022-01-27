@@ -63,3 +63,6 @@ fun togglePictureVisibility(
         picture.hide()
     }
 }
+fun View.toggleVisibility(show: Boolean) {
+    if (show) this.show() else this.hide()
+}
