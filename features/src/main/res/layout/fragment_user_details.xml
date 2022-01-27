@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="25dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25dp" />
+
+    <FrameLayout
+        android:id="@+id/speaker_avatar_container"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="TJ" />
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="wrap_content"
+            android:contentDescription="Profile Picture"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:src="@tools:sample/avatars"
+            tools:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/speaker_avatar_container"
+        tools:text="Esther Jolugba" />
+</androidx.constraintlayout.widget.ConstraintLayout>

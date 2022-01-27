@@ -1,0 +1,28 @@
+apply from: "$rootDir/common-android-library.gradle"
+android {
+    buildToolsVersion '30.0.3'
+}
+
+dependencies {
+    implementation project(Modules.common)
+    implementation project(Modules.remote)
+    implementation Libs.core_ktx
+    implementation Libs.appcompat
+    implementation Libs.gson
+    implementation Libs.retrofit
+    implementation Libs.logging_interceptor
+    implementation Libs.converter_gson
+    implementation Libs.rxJava
+    implementation Libs.rxKotlin
+    implementation Libs.rxRetrofitAdapter
+    implementation Libs.rxAndroid
+    implementation Libs.paging
+    implementation Libs.hilt_android
+    kapt Libs.hilt_android_compiler
+    implementation Libs.roomkt
+    implementation Libs.roomRuntime
+    kapt Libs.roomComplier
+    implementation Libs.junit
+    androidTestImplementation Libs.junit_ext
+    androidTestImplementation Libs.expresso_core
+}

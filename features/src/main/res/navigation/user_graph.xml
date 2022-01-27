@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_graph"
+    app:startDestination="@id/githubUsersFragment">
+
+    <fragment
+        android:id="@+id/githubUsersFragment"
+        android:name="com.example.features.ui.users.GithubUsersFragment"
+        android:label="User Screen"
+        tools:layout="@layout/fragment_github_users" >
+        <action
+            android:id="@+id/go_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.features.ui.detail.UserDetailsFragment"
+        tools:layout="@layout/fragment_user_details"
+        android:label="User Details">
+        <deepLink
+            app:uri="https://com.feature/user.details" />
+        <argument
+            android:name="users"
+            app:argType="com.example.remote.model.Item" />
+    </fragment>
+</navigation>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="20dp"
+    android:layout_height="wrap_content"
+    tools:ignore="SpUsage">
+
+    <FrameLayout
+        android:id="@+id/speaker_avatar_container"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/placeholder"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:text="TJ" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@tools:sample/avatars" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speaker_avatar_container"
+        tools:text="Dummy Child 1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
