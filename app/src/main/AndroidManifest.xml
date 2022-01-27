@@ -15,7 +15,7 @@
         android:theme="@style/Theme.LagosGithubHub"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".GithubUserActivity"
+            android:name="com.example.features.ui.GithubUserActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -37,3 +37,29 @@ fun Fragment.showShortSnackbar(message: String) {
     snackTextView.maxLines = 3
     snackbar.show()
 }
+
+fun View.hide(onlyInvisible: Boolean = false) {
+    this.visibility = if (onlyInvisible) View.INVISIBLE else View.GONE
+}
+
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
+
+fun getNameInitialsForSingle(name: String): String {
+    return "${name.first()} ${name.last()}"
+}
+
+fun togglePictureVisibility(
+    imageIsVisible: Boolean,
+    placeHolder: TextView,
+    picture: ImageView
+) {
+    if (imageIsVisible) {
+        placeHolder.hide()
+        picture.show()
+    } else {
+        placeHolder.show()
+        picture.hide()
+    }
+}

@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.common.NavigationDestinations
+import com.example.common.getNameInitialsForSingle
 import com.example.common.ob
 import com.example.common.showShortSnackbar
 import com.example.features.R
@@ -41,8 +42,7 @@ class GithubUsersFragment : Fragment(R.layout.fragment_github_users){
         }
         setUpRecyclers()
         usersAdapter.onClickItemListener={
-            showShortSnackbar(it.login)
-            findNavController().navigate(NavigationDestinations.TO_USER_FRAGMENT)
+            findNavController().navigate(GithubUsersFragmentDirections.goToUserDetailsFragment(it))
         }
 
     }

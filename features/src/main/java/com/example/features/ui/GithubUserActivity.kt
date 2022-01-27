@@ -1,8 +1,8 @@
-package com.example.lagosgithubhub
+package com.example.features.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lagosgithubhub.databinding.ActivityGithubUserBinding
+import com.example.features.databinding.ActivityGithubUserBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

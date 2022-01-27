@@ -22,7 +22,7 @@
 
     <FrameLayout
         android:id="@+id/speaker_avatar_container"
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="32dp"
@@ -32,10 +32,10 @@
 
         <TextView
             android:id="@+id/placeholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginTop="?attr/actionBarSize"
+            android:visibility="gone"
             android:background="@drawable/circle"
             android:gravity="center"
             android:textAllCaps="true"
@@ -46,13 +46,12 @@
 
         <ImageView
             android:id="@+id/picture"
-            android:layout_width="wrap_content"
-            android:contentDescription="Profile Picture"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="100dp"
+            android:contentDescription="@string/profile_picture"
+            android:layout_height="100dp"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
             tools:src="@tools:sample/avatars"
-            tools:visibility="gone" />
+            />
 
     </FrameLayout>
 
