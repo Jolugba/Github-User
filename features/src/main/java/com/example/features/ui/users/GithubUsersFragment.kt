@@ -25,7 +25,7 @@ class GithubUsersFragment : Fragment(R.layout.fragment_github_users){
     private val viewModel by viewModels<UsersViewModel>()
     private val usersAdapter
             by lazy { UsersAdapter() }
-
+//TODO: Add pagination/fetch other pages and favorite button
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentGithubUsersBinding.bind(view)
